@@ -9,7 +9,7 @@ import java.util.List;
 
 
 @Service
-public class CafeGradeServiceImpl implements CafeGradeService {
+public class CoffeeGradeServiceImpl implements CoffeeGradeService {
     @Autowired
     private CoffeeGradeRepository coffeeGradeRepository;
 

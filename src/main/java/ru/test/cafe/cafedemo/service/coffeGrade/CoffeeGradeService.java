@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * Сервис по работе с объектом Тип кофе.
  */
-public interface CafeGradeService {
+public interface CoffeeGradeService {
     /**
      * Возвращает все элементы справочника Тип кофе
      * @return

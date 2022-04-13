@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import java.util.Date;
 
 /**
- * Класс заказ кофе
+ * Класс Заказ
  */
 @Entity
 public class Orders {
