@@ -5,7 +5,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 /**
- * Класс Наименование сорт кофе
+ * Класс сорт кофе
  */
 @Entity
 public class CoffeeGrade {
