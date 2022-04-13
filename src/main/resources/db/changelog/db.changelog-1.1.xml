@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:pro="http://www.liquibase.org/xml/ns/pro"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd
+      http://www.liquibase.org/xml/ns/pro
+      http://www.liquibase.org/xml/ns/pro/liquibase-pro-4.1.xsd">
+    <changeSet author="aibliev" id="2">
+        <insert tableName="coffee_grade">
+            <column name="grade_name_ru" value="Чёрный кофе"/>
+            <column name="grade_name_eng" value="Black coffee"/>
+            <column name="price" value="1"/>
+            <column name="disabled" value="false"/>
+        </insert>
+        <insert tableName="coffee_grade">
+            <column name="grade_name_ru" value="Американо"/>
+            <column name="grade_name_eng" value="Americano"/>
+            <column name="price" value="2"/>
+            <column name="disabled" value="false"/>
+        </insert>
+        <insert tableName="coffee_grade">
+            <column name="grade_name_ru" value="Латте"/>
+            <column name="grade_name_eng" value="Latte"/>
+            <column name="price" value="2"/>
+            <column name="disabled" value="false"/>
+        </insert>
+        <insert tableName="coffee_grade">
+            <column name="grade_name_ru" value="Капучино"/>
+            <column name="grade_name_eng" value="Cappuccino"/>
+            <column name="price" value="4"/>
+            <column name="disabled" value="false"/>
+        </insert>
+        <insert tableName="coffee_grade">
+            <column name="grade_name_ru" value="Моккачино"/>
+            <column name="grade_name_eng" value="Mocha"/>
+            <column name="price" value="4"/>
+            <column name="disabled" value="false"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>
