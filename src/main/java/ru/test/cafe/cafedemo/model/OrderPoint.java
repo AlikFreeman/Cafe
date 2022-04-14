@@ -23,8 +23,9 @@ public class OrderPoint {
      */
     private Integer cupCounter;
     /**
-     * Номер заказа
+     * Заказ
      */
+
     @ManyToOne
     @JoinColumn(name = "order_id", nullable = false)
     private Order order;
