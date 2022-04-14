@@ -14,7 +14,7 @@ public class OrderCreateDto {
      * Имя
      */
     private String name;
-    
+
     private List<OrderPointDto> points;
 
     public String getAddress() {
