@@ -10,6 +10,7 @@ import ru.test.cafe.cafedemo.repository.CoffeeGradeRepository;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.function.Consumer;
 
 /**
  * Метод для расчета стоимости заказов
@@ -24,22 +25,14 @@ public class OrderCalcUtil {
     private Integer summDelivery;
 
     public Integer calc(List<OrderPointDto> orderPointDto) {
-//        private final CoffeeGradeRepository coffeeGradeRepository;
-//
-//        public HashMap<Integer, Integer> calcPossiblePrice (HashMap < Integer, Integer > selectedItems){
-//            Integer fullPrice = 0;
-//            Integer possiblePrice = 0;
-//            HashMap<Integer, Integer> possiblePricePromotion = new HashMap<>();
-//            for (Map.Entry<Integer, Integer> entry : selectedItems.enrySet()) {
-//                Integer gradeId = entry.getKey();
-//                Integer cupCounter = entry.getValue();
-//                int freeCupCounter = cupCounter / freeCup;
-//                CoffeeGrade coffeeGrade = coffeeGradeRepository.findById(gradeId).orElseThrow(() -> new NotFoundException("{coffee grade not found by Id" + gradeId + "}"));
-//                possiblePrice += (cupCounter - freeCupCounter) * coffeGrade.getPrice();
-//            }
-//            possiblePricePromotion.put(possiblePrice, fullPrice);
-//            return possiblePricePromotion;
-//        }
-//    }
+        Integer fullPrice = 0;
+        Integer possiblePrice = 0;
 
+        for () {
+            int freeCupCounter = orderPointDto.cupCounter / freeCup;
+            possiblePrice += (cupCounter - freeCupCounter) * coffeeGrade.getPrice();
+            fullPrice += cupCounter * coffeeGrade.getPrice();
+        }
+
+    }
 }

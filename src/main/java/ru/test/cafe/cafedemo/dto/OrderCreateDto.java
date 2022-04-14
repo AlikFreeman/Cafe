@@ -6,8 +6,15 @@ import java.util.List;
  * Данные для создания заказа
  */
 public class OrderCreateDto {
+    /**
+     * Адрес
+     */
     private String address;
+    /**
+     * Имя
+     */
     private String name;
+    
     private List<OrderPointDto> points;
 
     public String getAddress() {
