@@ -1,8 +1,6 @@
 package ru.test.cafe.cafedemo.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Date;
 
 /**
@@ -27,7 +25,17 @@ public class OrderPoint {
     /**
      * Номер заказа
      */
-    private String status;
+    @ManyToOne
+    @JoinColumn(name = "order_id", nullable = false)
+    private Order order;
+
+    public Order getOrder() {
+        return order;
+    }
+
+    public void setOrder(Order order) {
+        this.order = order;
+    }
 
     public Long getId() {
         return id;
@@ -52,12 +60,5 @@ public class OrderPoint {
     public void setCupCounter(Integer cupCounter) {
         this.cupCounter = cupCounter;
     }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
 }
+

@@ -5,7 +5,9 @@ import liquibase.pro.packaged.S;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import java.util.Date;
+import java.util.List;
 
 /**
  * Класс Заказ
@@ -42,6 +44,8 @@ public class Order {
      * Статус заказа
      */
     private String status;
+    @OneToMany(mappedBy = "order")
+    List<OrderPoint> points;
 
     public Long getId() {
         return id;
