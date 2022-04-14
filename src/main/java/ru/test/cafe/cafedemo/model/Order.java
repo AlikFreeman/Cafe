@@ -11,7 +11,7 @@ import java.util.Date;
  * Класс Заказ
  */
 @Entity
-public class Orders {
+public class Order {
     /**
      * id
      */

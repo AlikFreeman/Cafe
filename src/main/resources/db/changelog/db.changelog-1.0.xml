@@ -18,7 +18,7 @@
             <column name="disabled" type="BOOLEAN"/>
         </createTable>
 
-        <createTable tableName="orders">
+        <createTable tableName="order">
             <column name="id" autoIncrement="true" type="INTEGER">
                 <constraints nullable="false" primaryKey="true" unique="true"/>
             </column>
@@ -37,7 +37,7 @@
             <column name="grade_name" type="VARCHAR(255)"/>
             <column name="cup_counter" type="INTEGER"/>
             <column name="order_id" autoIncrement="true" type="INTEGER">
-                <constraints nullable="false" foreignKeyName="fk_order_id" references="orders(id)"/>
+                <constraints nullable="false" foreignKeyName="fk_order_id" references="order(id)"/>
             </column>
         </createTable>
 
