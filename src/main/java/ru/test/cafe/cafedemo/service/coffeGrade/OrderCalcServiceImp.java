@@ -25,9 +25,8 @@ public class OrderCalcServiceImp {
     private CoffeeGradeRepository coffeeGradeRepository;
 
 
-    public HashMap<Integer, Integer> calc(List<OrderPointDto> orderPointDtos) {
+    public Integer calc(List<OrderPointDto> orderPointDtos) {
         Integer fullPrice = 0;
-        Integer possiblePrice = 0;
         List<CoffeeGrade> grades = coffeeGradeRepository.findAll();
 
         /**
@@ -40,21 +39,14 @@ public class OrderCalcServiceImp {
 
         for (OrderPointDto orderPointDto : orderPointDtos) {
             /**
-             * Сумма заказа по сортам
+             * Сумма заказа за каждый сорт кофе с учетом скидки по количеству кружек
              */
-            int summCupPrice = orderPointDto.getCupCounter() * idPrice.get(orderPointDto.getCoffeeGradeId());
-            /**
-             * Сумма со скидкой по количеству кружек
-             */
-            int freeCupCounter = orderPointDto.getCupCounter() / freeCup;
-            possiblePrice += (orderPointDto.getCupCounter() - freeCupCounter) * idPrice.get(orderPointDto.getCoffeeGradeId());
-            fullPrice += possiblePrice - summCupPrice;
+            Integer possiblePrice = (orderPointDto.getCupCounter() - orderPointDto.getCupCounter() / freeCup) * idPrice.get(orderPointDto.getCoffeeGradeId());
+            fullPrice += possiblePrice;
         }
-        idPrice.put(possiblePrice, fullPrice);
-        return idPrice;
-        /**
-         * Сумма заказа
-         */
-
+        if (fullPrice < summDelivery) {
+            fullPrice = fullPrice + delivery;
+        }
+        return fullPrice;
     }
 }
