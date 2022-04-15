@@ -28,4 +28,5 @@ public class OrderPointDto {
     public void setCupCounter(Integer cupCounter) {
         this.cupCounter = cupCounter;
     }
+
 }

@@ -14,7 +14,9 @@ public class OrderCreateDto {
      * Имя
      */
     private String name;
-
+    /**
+     * Количество кружек
+     */
     private List<OrderPointDto> points;
 
     public String getAddress() {

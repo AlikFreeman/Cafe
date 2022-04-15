@@ -6,4 +6,5 @@ import ru.test.cafe.cafedemo.model.CoffeeGrade;
 
 @Repository
 public interface CoffeeGradeRepository extends JpaRepository<CoffeeGrade, Integer> {
+
 }
