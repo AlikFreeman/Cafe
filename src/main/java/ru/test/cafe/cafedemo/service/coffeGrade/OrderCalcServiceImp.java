@@ -29,12 +29,13 @@ public class OrderCalcServiceImp {
         Integer fullPrice = 0;
         List<CoffeeGrade> grades = coffeeGradeRepository.findAll();
 
+
         /**
-         * Вынести в отдельный метод
+         * Вынести в отдельный метод. Таблица цен по сортам кофе
          */
         HashMap<Integer, Integer> idPrice = new HashMap<>();
-        for (CoffeeGrade coffeGrade : grades) {
-            idPrice.put(coffeGrade.getId(), coffeGrade.getPrice());
+        for (CoffeeGrade coffeeGrade : grades) {
+            idPrice.put(coffeeGrade.getId(), coffeeGrade.getPrice());
         }
 
         for (OrderPointDto orderPointDto : orderPointDtos) {
