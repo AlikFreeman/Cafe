@@ -9,7 +9,6 @@ import ru.test.cafe.cafedemo.repository.CoffeeGradeRepository;
 
 import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
  * Метод для расчета стоимости заказов
@@ -28,9 +27,11 @@ public class OrderCalcServiceImp {
     /**
      * Сумма заказа за каждый сорт кофе с учетом скидки по количеству кружек
      */
-    public Integer calc(List<OrderPointDto> orderPointDtos, HashMap<Integer, Integer> idPrice) {
+    public Integer calc(List<OrderPointDto> orderPointDtos) {
         Integer fullPrice = 0;
         List<CoffeeGrade> grades = coffeeGradeRepository.findAll();
+        HashMap<Integer, Integer> idPrice = idPrice(grades);
+
         for (OrderPointDto orderPointDto : orderPointDtos) {
             Integer possiblePrice = (orderPointDto.getCupCounter() - orderPointDto.getCupCounter() / freeCup) * idPrice.get(orderPointDto.getCoffeeGradeId());
             fullPrice += possiblePrice;
