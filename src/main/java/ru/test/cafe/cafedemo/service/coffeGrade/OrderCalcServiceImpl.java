@@ -14,7 +14,7 @@ import java.util.List;
  * Метод для расчета стоимости заказов
  */
 @Component
-public class OrderCalcServiceImp {
+public class OrderCalcServiceImpl {
     @Value("${coffee.delivery}")
     private Integer delivery;
     @Value("${coffee.free.cup}")
