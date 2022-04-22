@@ -1,7 +1,14 @@
 package ru.test.cafe.cafedemo.dto;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+//@Data
+//@AllArgsConstructor
+//@NoArgsConstructor
 /**
- *  Позиция заказа
+ * Позиция заказа
  */
 public class OrderPointDto {
     /**
