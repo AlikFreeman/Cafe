@@ -1,6 +1,8 @@
 package ru.test.cafe.cafedemo.model;
 
 import liquibase.pro.packaged.S;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -12,6 +14,8 @@ import java.util.List;
 /**
  * Класс Заказ
  */
+@Data
+@NoArgsConstructor
 @Entity
 public class Order {
     /**
@@ -46,60 +50,60 @@ public class Order {
     private String status;
     @OneToMany(mappedBy = "order")
     List<OrderPoint> points;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public Date getOrderDateTime() {
-        return orderDateTime;
-    }
-
-    public void setOrderDateTime(Date orderDateTime) {
-        this.orderDateTime = orderDateTime;
-    }
-
-    public String getCustomerName() {
-        return customerName;
-    }
-
-    public void setCustomerName(String customerName) {
-        this.customerName = customerName;
-    }
-
-    public String getDeliveryAddress() {
-        return deliveryAddress;
-    }
-
-    public void setDeliveryAddress(String deliveryAddress) {
-        this.deliveryAddress = deliveryAddress;
-    }
-
-    public String getDeliveryType() {
-        return deliveryType;
-    }
-
-    public void setDeliveryType(String deliveryType) {
-        this.deliveryType = deliveryType;
-    }
-
-    public Integer getFullOrderPrice() {
-        return fullOrderPrice;
-    }
-
-    public void setFullOrderPrice(Integer fullOrderPrice) {
-        this.fullOrderPrice = fullOrderPrice;
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
 }
+//    public Long getId() {
+//        return id;
+//    }
+//
+//    public void setId(Long id) {
+//        this.id = id;
+//    }
+//
+//    public Date getOrderDateTime() {
+//        return orderDateTime;
+//    }
+//
+//    public void setOrderDateTime(Date orderDateTime) {
+//        this.orderDateTime = orderDateTime;
+//    }
+//
+//    public String getCustomerName() {
+//        return customerName;
+//    }
+//
+//    public void setCustomerName(String customerName) {
+//        this.customerName = customerName;
+//    }
+//
+//    public String getDeliveryAddress() {
+//        return deliveryAddress;
+//    }
+//
+//    public void setDeliveryAddress(String deliveryAddress) {
+//        this.deliveryAddress = deliveryAddress;
+//    }
+//
+//    public String getDeliveryType() {
+//        return deliveryType;
+//    }
+//
+//    public void setDeliveryType(String deliveryType) {
+//        this.deliveryType = deliveryType;
+//    }
+//
+//    public Integer getFullOrderPrice() {
+//        return fullOrderPrice;
+//    }
+//
+//    public void setFullOrderPrice(Integer fullOrderPrice) {
+//        this.fullOrderPrice = fullOrderPrice;
+//    }
+//
+//    public String getStatus() {
+//        return status;
+//    }
+//
+//    public void setStatus(String status) {
+//        this.status = status;
+//    }
+//}

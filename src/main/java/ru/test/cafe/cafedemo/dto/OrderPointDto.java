@@ -4,12 +4,10 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-//@Data
-//@AllArgsConstructor
-//@NoArgsConstructor
 /**
  * Позиция заказа
  */
+@Data
 public class OrderPointDto {
     /**
      * id
@@ -20,20 +18,20 @@ public class OrderPointDto {
      */
     private Integer cupCounter;
 
-    public Integer getCoffeeGradeId() {
-        return coffeeGradeId;
-    }
-
-    public void setCoffeeGradeId(Integer coffeeGradeId) {
-        this.coffeeGradeId = coffeeGradeId;
-    }
-
-    public Integer getCupCounter() {
-        return cupCounter;
-    }
-
-    public void setCupCounter(Integer cupCounter) {
-        this.cupCounter = cupCounter;
-    }
+//    public Integer getCoffeeGradeId() {
+//        return coffeeGradeId;
+//    }
+//
+//    public void setCoffeeGradeId(Integer coffeeGradeId) {
+//        this.coffeeGradeId = coffeeGradeId;
+//    }
+//
+//    public Integer getCupCounter() {
+//        return cupCounter;
+//    }
+//
+//    public void setCupCounter(Integer cupCounter) {
+//        this.cupCounter = cupCounter;
+//    }
 
 }

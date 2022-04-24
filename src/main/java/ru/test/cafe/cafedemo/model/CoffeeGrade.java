@@ -1,5 +1,7 @@
 package ru.test.cafe.cafedemo.model;
 
+import lombok.Data;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -8,6 +10,7 @@ import javax.persistence.Id;
  * Класс сорт кофе
  */
 @Entity
+@Data
 public class CoffeeGrade {
     /**
      * id
@@ -20,7 +23,7 @@ public class CoffeeGrade {
      */
     private String gradeNameRu;
     /**
-     * Наименование сорт кофе на русском
+     * Наименование сорт кофе на английском
      */
     private String gradeNameEng;
     /**
@@ -32,44 +35,44 @@ public class CoffeeGrade {
      */
     private boolean disabled;
 
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getGradeNameRu() {
-        return gradeNameRu;
-    }
-
-    public void setGradeNameRu(String gradeNameRu) {
-        this.gradeNameRu = gradeNameRu;
-    }
-
-    public String getGradeNameEng() {
-        return gradeNameEng;
-    }
-
-    public void setGradeNameEng(String gradeNameEng) {
-        this.gradeNameEng = gradeNameEng;
-    }
-
-    public Integer getPrice() {
-        return price;
-    }
-
-    public void setPrice(Integer price) {
-        this.price = price;
-    }
-
-    public boolean isDisabled() {
-        return disabled;
-    }
-
-    public void setDisabled(boolean disabled) {
-        this.disabled = disabled;
-    }
+//    public Integer getId() {
+//        return id;
+//    }
+//
+//    public void setId(Integer id) {
+//        this.id = id;
+//    }
+//
+//    public String getGradeNameRu() {
+//        return gradeNameRu;
+//    }
+//
+//    public void setGradeNameRu(String gradeNameRu) {
+//        this.gradeNameRu = gradeNameRu;
+//    }
+//
+//    public String getGradeNameEng() {
+//        return gradeNameEng;
+//    }
+//
+//    public void setGradeNameEng(String gradeNameEng) {
+//        this.gradeNameEng = gradeNameEng;
+//    }
+//
+//    public Integer getPrice() {
+//        return price;
+//    }
+//
+//    public void setPrice(Integer price) {
+//        this.price = price;
+//    }
+//
+//    public boolean isDisabled() {
+//        return disabled;
+//    }
+//
+//    public void setDisabled(boolean disabled) {
+//        this.disabled = disabled;
+//    }
 }
 
