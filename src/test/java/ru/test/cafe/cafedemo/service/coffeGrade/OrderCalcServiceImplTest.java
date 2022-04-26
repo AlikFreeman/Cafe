@@ -25,6 +25,9 @@ class OrderCalcServiceImplTest {
 
         Assertions.assertEquals(results, resultSum);
     }
+    void secondTest (List<OrderPointDto> orderPointDtos, Integer resultFullPrice){
+
+    }
     private static Stream<Arguments> createTestData() {
         return Stream.of(Arguments.of(List.of(createOrderPointDto()), 6));
     }
