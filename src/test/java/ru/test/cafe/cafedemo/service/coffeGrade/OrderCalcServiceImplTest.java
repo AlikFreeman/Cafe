@@ -10,6 +10,9 @@ import ru.test.cafe.cafedemo.dto.OrderPointDto;
 import java.util.List;
 import java.util.stream.Stream;
 
+/**
+ * Тест для {@link OrderCalcServiceImpl}
+ */
 @SpringBootTest
 class OrderCalcServiceImplTest {
     @Autowired
@@ -17,7 +20,9 @@ class OrderCalcServiceImplTest {
     @ParameterizedTest
     @MethodSource("createTestData")
     void firstTest (List<OrderPointDto> orderPointDtos, Integer resultSum) {
+
         Integer results = service.calc(orderPointDtos);
+
         Assertions.assertEquals(results, resultSum);
     }
     private static Stream<Arguments> createTestData() {

@@ -30,7 +30,7 @@
             <column name="grade_name_ru" value="Капучино"/>
             <column name="grade_name_eng" value="Cappuccino"/>
             <column name="price" value="4"/>
-            <column name="disabled" value="false"/>
+            <column name="disabled" value="true"/>
         </insert>
         <insert tableName="coffee_grade">
             <column name="grade_name_ru" value="Моккачино"/>

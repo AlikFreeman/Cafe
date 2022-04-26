@@ -8,6 +8,8 @@ import lombok.NoArgsConstructor;
  * Позиция заказа
  */
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class OrderPointDto {
     /**
      * id

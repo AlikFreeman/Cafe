@@ -5,6 +5,6 @@ import org.springframework.stereotype.Repository;
 import ru.test.cafe.cafedemo.model.CoffeeGrade;
 
 @Repository
-public interface CoffeeGradeRepository extends JpaRepository<CoffeeGrade, Integer> {
+public interface CoffeeGradeRepository extends JpaRepository<CoffeeGrade, Long> {
 
 }

@@ -14,9 +14,9 @@ import java.util.List;
 /**
  * Класс Заказ
  */
+@Entity
 @Data
 @NoArgsConstructor
-@Entity
 public class Order {
     /**
      * id
