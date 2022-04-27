@@ -7,6 +7,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import ru.test.cafe.cafedemo.dto.OrderPointDto;
+
 import java.util.List;
 import java.util.stream.Stream;
 
@@ -20,13 +21,11 @@ class OrderCalcServiceImplTest {
     @ParameterizedTest
     @MethodSource("createTestData")
     void firstTest (List<OrderPointDto> orderPointDtos, Integer resultSum) {
-
+        //when
         Integer results = service.calc(orderPointDtos);
 
+        //then
         Assertions.assertEquals(results, resultSum);
-    }
-    void secondTest (List<OrderPointDto> orderPointDtos, Integer resultFullPrice){
-
     }
     private static Stream<Arguments> createTestData() {
         return Stream.of(Arguments.of(List.of(createOrderPointDto()), 6));
