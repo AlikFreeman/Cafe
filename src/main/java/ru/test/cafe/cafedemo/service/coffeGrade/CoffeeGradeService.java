@@ -12,5 +12,5 @@ public interface CoffeeGradeService {
      * Возвращает все элементы справочника Тип кофе
      * @return
      */
-    List<CoffeeGrade> list();
+    List<CoffeeGrade> getAllCoffeeGrades();
 }
