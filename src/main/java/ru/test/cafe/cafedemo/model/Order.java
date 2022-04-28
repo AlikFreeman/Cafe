@@ -1,6 +1,7 @@
 package ru.test.cafe.cafedemo.model;
 
 import liquibase.pro.packaged.S;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -17,13 +18,21 @@ import java.util.List;
 @Entity
 @Data
 @NoArgsConstructor
+@AllArgsConstructor
 public class Order {
+    public Order(List<OrderPoint> orderPoints) {
+        this.orderPoints = orderPoints;
+    }
+    public Order(Long orderId){
+        this.orderId = orderId;
+    }
+
     /**
      * id
      */
     @Id
     @GeneratedValue
-    private Long id;
+    private Long orderId;
     /**
      * Дата и время заказа
      */
@@ -49,6 +58,7 @@ public class Order {
      */
     private String status;
     @OneToMany(mappedBy = "order")
-    List<OrderPoint> points;
+    List<OrderPoint> orderPoints;
+
 }
 
