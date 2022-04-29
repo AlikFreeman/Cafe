@@ -19,88 +19,51 @@
             crossorigin="anonymous"></script>
 </head>
 <body>
-<!-- Контент страницы -->
-
-<h1>Выберете кофе, укажите количество кружек.</h1>
+<a class="btn btn-primary" href="/" role="button">Вернуться на главную страницу</a>
+<a class="btn btn-primary" href="/create_point" role="button">Вернуться на страницу заказа</a>
+<!-- Форма доставки -->
 <div class="container">
     <div class="row">
-        <div class="col-md-4" style="background-color: aquamarine;">
-            Название
-            <ul class="list-group">
-                <li class="list-group-item">
-                    <input class="form-check-input me-1" type="checkbox" value="" aria-label="coffe_rade.id">
-                    Первый чекбокс
-                </li>
-                <li class="list-group-item">
-                    <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-                    Второй чекбокс
-                </li>
-                <li class="list-group-item">
-                    <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-                    Третий чекбокс
-                </li>
-                <li class="list-group-item">
-                    <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-                    Четвертый чекбокс
-                </li>
-                <li class="list-group-item">
-                    <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-                    Пятый чекбокс
-                </li>
-            </ul>
+        <div class="col-md-12" style="background-color: antiquewhite;">
+            Выберете доставку
+            <form class="was-validated">
+                <div class="mb-3">
+                    <label for="validationTextarea" class="form-label">Фамилия Имя Отчество</label>
+                    <textarea class="form-control is-invalid" id="validationTextarea" placeholder="Иванов Иван Иванович" required></textarea>
+                    <div class="invalid-feedback">
+                        Введите данные.
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="validationTextarea" class="form-label">Адрес доставки</label>
+                    <textarea class="form-control is-invalid" id="validationText" placeholder="г. Ткачев, улица Героев огорода, дом 1, корпус 2, квартира 3" required></textarea>
+                    <div class="invalid-feedback">
+                        Введите данные, если выбран способ доставки самовывоз, то пометьте об этом.
+                    </div>
+                </div>
+
+                <div class="form-check mb-3">
+                    <input type="checkbox" class="form-check-input" id="validationFormCheck1" required>
+                    <label class="form-check-label" for="validationFormCheck1">Данные заполнены правильно</label>
+                    <div class="invalid-feedback">Я подтверждаю правильность заполнения данных</div>
+                </div>
+                <div class="mb-3">
+                    <button class="btn btn-primary" type="submit" >Отправить заказ</button>
+                </div>
+            </form>
+
+        </div>
+        <div class="col-md-12" style="background: aqua">
+            Стоимость заказа fullPrice
         </div>
 
-        <div class="col-md-3" style="background: aqua">
-            Цена
-        </div>
 
-        <div class="col-md-3" style="background-color: bisque">
-            Количество
-        </div>
     </div>
 </div>
+<!-- Контент страницы -->
 
-<h2>Описание</h2>
 
-<img src="images/black.jpg" class="col-md-6 float-md mb-3 ms-md-3 img-thumbnail" alt="...">
-<br>
-<div class="clearfix">
-    <p>
-        Эспрессо - это скорее дегустация, чем питье кофе в привычном понимании. В первый раз скорее всего вам будет горько, не вкусно, кисло. Но, поверьте, за этой завесой скрывается благородная и широкая душа. Со временем вам станут доступны все нюансы вкуса. Эспрессо нужно попробовать хотя бы ради того, чтобы сравнить настоящий кофе с сублимированным. Назад к растворимому кофе вы вряд ли уже не вернётесь.
-    </p>
-</div>
-
-<img src="images/americano.jpg" class="col-md-6 float-md mb-3 ms-md-3 img-thumbnail" alt="...">
-<br>
-<div class="clearfix">
-    <p>
-        Америка́но (итал. Caffè Americano — кофе по-американски) — способ приготовления кофе, заключающийся в соединении определённого количества горячей воды и эспрессо. Не стоит путать американо с Эспрессо-лунго (в нём вся вода готовится с кофейной массой) или Лонг блэк (в нём эспрессо наливается в кружку с горячей водой).
-    </p>
-</div>
-
-<img src="images/latte.jpg" class="col-md-6 float-md mb-3 ms-md-3 img-thumbnail" alt="...">
-<br>
-<div class="clearfix">
-    <p>
-        Ла́тте (англизированный и сокращённый вариант от итал. caffè latte [kaffeˈlatte] — «кофе с молоком») — кофейный напиток родом из Италии, состоящий из молока (итал. latte) и кофе эспрессо. Латте варится на основе молока, образуя в чашке или бокале трёхслойную смесь из молока, эспрессо и пены.
-    </p>
-</div>
-
-<img src="images/kapuchino.jpg" class="col-md-6 float-md mb-3 ms-md-3 img-thumbnail" alt="...">
-<br>
-<div class="clearfix">
-    <p>
-        Капучи́но (от итал. cappuccino — капуцин) — кофейный напиток итальянской кухни на основе эспрессо с добавлением в него подогретого вспененного молока.
-    </p>
-</div>
-
-<img src="images/mokko.jpg" class="col-md-6 float-md mb-3 ms-md-3 img-thumbnail" alt="...">
-<br>
-<div class="clearfix">
-    <p>
-        Моккачино (итал. mocaccino, caffè mocha, также известен как «мо́кко» или «мо́кка») — кофейный напиток, созданный в Америке и являющийся разновидностью латте с добавлением шоколада. Название «моккачино» используется в Европе. В Северной Америке этот напиток известен как «мокко» («мокка»). А само название Мокка берёт своё начало ещё в 18 веке в порту Йемена на Красном море, откуда доставлялись кофе и кожа.
-    </p>
-</div>
 
 </body>
 </html>
