@@ -26,4 +26,10 @@ public class WebController {
 //        model.addAttribute("coffeeGrade", new CoffeeGrade());
         return "order";
     }
+
+    @GetMapping("/complete")
+    public String complete() {
+//        model.addAttribute("coffeeGrade", new CoffeeGrade());
+        return "complete";
+    }
 }
